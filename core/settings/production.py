@@ -2,7 +2,7 @@ from decouple import config
 
 from .base import *  # noqa
 
-DEBUG = False if config("DEBUG", default="False") == "False" else True
+DEBUG = False if config("DJANGO_DEBUG", default="False") == "False" else True
 
 SECRET_KEY = config("SECRET_KEY")
 
