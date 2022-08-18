@@ -10,7 +10,7 @@ repos:
     rev: 22.6.0
     hooks:
       - id: black
-        language_version: python3.8
+        language_version: python3.10
 
   - repo: https://github.com/PyCQA/isort
     rev: 5.10.1
@@ -25,7 +25,5 @@ repos:
   - repo: https://github.com/python-poetry/poetry
     rev: '1.2.0b3'  # add version here
     hooks:
-      - id: poetry-check
-      - id: poetry-lock
       - id: poetry-export
         args: [ "-f", "requirements.txt", "-o", "requirements.txt" , "--without-hashes"]
