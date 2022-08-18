@@ -40,3 +40,7 @@ build-backend = "poetry.core.masonry.api"
 
 [tool.isort]
 py_version=38
+
+[tool.pytest.ini_options]
+addopts = "--ds=core.settings.test --reuse-db"
+python_files = ["tests.py", "test_*.py"]
