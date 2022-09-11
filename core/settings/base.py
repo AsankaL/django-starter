@@ -32,6 +32,7 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+    "assets",
     "users",
 ]
 
@@ -52,7 +53,7 @@ TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
         "DIRS": [BASE_DIR / "templates"],
-        "APP_DIRS": False,
+        "APP_DIRS": True,
         "OPTIONS": {
             "context_processors": [
                 "django.template.context_processors.debug",
@@ -134,3 +135,12 @@ MEDIA_URL = "/media/"
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+
+
+# Webpack Encore Settings
+WEBPACK_ENCORE = {
+    "output_path": BASE_DIR / "assets/static",
+    "script_attributes": {
+        "defer": True,
+    },
+}

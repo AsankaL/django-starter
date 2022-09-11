@@ -1,0 +1,8 @@
+{% extends 'layout.html' %}
+{% load stimulus %}
+{% block body %}
+    <div {% stimulus_controller 'app/hello' %}>
+        <button {% stimulus_action 'app/hello' 'greet' %}>Click Me</button>
+        <div {% stimulus_target 'app/hello' 'output' %}></div>
+    </div>
+{% endblock %}

@@ -5,6 +5,8 @@
 media/*
 !media/.keep
 
+node_modules
+
 # Django #
 *.log
 *.pot
